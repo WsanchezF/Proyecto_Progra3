@@ -1,0 +1,25 @@
+<div class="login-container">
+  <div class="login-contein">
+    <header class="login__header">
+      <div class="login__header__left">
+        <img alt="logo" src="assets/programador.png">
+        <h2>Todas las noticias de última hora sobre tecnología o salud.</h2>
+      </div>
+      <div class="login__header__right">
+        <mat-card class="login__header__right__card">
+          <mat-card-content class="login__header__right__card__content">
+            <form #form="ngForm" (ngSubmit)="login(form)" class="login-form">
+              <input name="Correo" ngModel placeholder="Correo electrónico o número de teléfono" required type="text">
+              <input name="Contraseña" ngModel placeholder="Contraseña" required type="text">
+              <button [disabled]="form.invalid || form.pending" class="login-button" *ngIf="!form.pending" type="submit">Iniciar sesión</button>
+            </form>
+            <a>¿Olvidaste tu contraseña?</a>
+            <button class="create-account" (click)="openRegister()">Crear cuenta nueva</button>
+          </mat-card-content>
+        </mat-card>
+        <img alt="quetzal" src="assets/foto_quetzal.png">
+      </div>
+
+    </header>
+  </div>
+</div>
